@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PonyDAO 前端视觉草稿 v0.1</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#preview">跳到视觉稿</a>
+  <header class="review-bar">
+    <div class="review-title"><span class="review-dot"></span><strong>PonyDAO 视觉草稿</strong><small>方向稿 v0.1</small></div>
+    <nav class="review-tabs" aria-label="画面切换">
+      <button data-screen="market" class="active">DAO 市场</button>
+      <button data-screen="dao">DAO 公开页</button>
+      <button data-screen="hub">My Hub</button>
+      <button data-screen="mobile">移动端</button>
+    </nav>
+    <span class="review-note">仅验证视觉与信息层级</span>
+  </header>
+
+  <main id="preview" class="preview-stage">
+    <section class="screen active" data-view="market" aria-label="DAO 市场视觉稿">
+      <header class="site-header">
+        <button class="brand" data-go="market" aria-label="PonyDAO 首页"><img src="./logo.png" alt=""><span><b>PonyDAO</b><small>BUILD IN PUBLIC</small></span></button>
+        <nav class="site-nav" aria-label="主导航"><button class="selected">发现</button><button>产品</button><button>项目</button><button>DAO 排行</button></nav>
+        <div class="header-actions"><button class="ghost">发起 DAO</button><button class="avatar-button" data-go="hub"><span>陈</span>My Hub</button></div>
+      </header>
+
+      <div class="market-hero">
+        <div class="hero-copy">
+          <span class="overline">OPEN COLLABORATION NETWORK</span>
+          <h1>一起把好点子，<br>做成真实世界的产品。</h1>
+          <p>发现开放的 DAO、产品与项目，以研发、销售或资金的方式加入，共同创造并分享价值。</p>
+          <label class="search-box"><span class="search-icon" aria-hidden="true"></span><input aria-label="搜索" placeholder="搜索 DAO、产品或项目"><button>探索机会</button></label>
+          <div class="hero-proof"><span><strong>24</strong>活跃 DAO</span><span><strong>86</strong>开放机会</span><span><strong>1,280</strong>OPC 正在协作</span></div>
+        </div>
+        <article class="spotlight-card" data-go="dao">
+          <div class="spotlight-top"><span>本周焦点 DAO</span><span class="live"><i></i>持续建设中</span></div>
+          <div class="orbital-art"><div class="orbit one"></div><div class="orbit two"></div><div class="robot-core"><span>P</span></div><span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span></div>
+          <div class="spotlight-copy"><span class="tag light">AI 硬件</span><h2>PONYGOGO</h2><p>让随身机器人走进每个人的日常生活。</p><div><span>5 位成员</span><span>2 个开放机会</span><button aria-label="查看 PONYGOGO">↗</button></div></div>
+        </article>
+      </div>
+
+      <div class="market-content">
+        <div class="section-row"><div><span class="overline">EXPLORE BY INTEREST</span><h2>你想参与什么？</h2></div><div class="category-chips"><button class="active">全部</button><button>AI 硬件</button><button>消费科技</button><button>运动健康</button><button>创意工具</button></div></div>
+        <div class="dao-grid">
+          <article class="dao-tile cobalt" data-go="dao"><div class="tile-cover"><span class="tile-code">01 / ROBOTICS</span><div class="mini-orbit"><i></i></div></div><div class="tile-body"><div><span class="status"><i></i>开放加入</span><span class="tag">DAO</span></div><h3>PONYGOGO</h3><p>共建随身机器人，让智能陪伴走向全球。</p><footer><span><b>5</b> 成员</span><span><b>1</b> 产品</span><span><b>1</b> 项目</span><button>查看 DAO →</button></footer></div></article>
+          <article class="dao-tile mint"><div class="tile-cover"><span class="tile-code">02 / SPORT TECH</span><div class="pulse-art"><i></i><i></i><i></i><i></i><i></i></div></div><div class="tile-body"><div><span class="status"><i></i>招募研发</span><span class="tag">DAO</span></div><h3>PONYRUN</h3><p>连接运动设备与训练服务，重构个人运动体验。</p><footer><span><b>5</b> 成员</span><span><b>1</b> 产品</span><span><b>1</b> 项目</span><button>查看 DAO →</button></footer></div></article>
+          <article class="dao-tile amber"><div class="tile-cover"><span class="tile-code">03 / CREATIVE</span><div class="type-art">PS</div></div><div class="tile-body"><div><span class="status warm"><i></i>筹备中</span><span class="tag">DAO</span></div><h3>PONY STUDIO</h3><p>设计 OPC 共同打造数字产品与品牌体验。</p><footer><span><b>8</b> 关注</span><span><b>1</b> 产品</span><span><b>0</b> 项目</span><button>查看 DAO →</button></footer></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-view="dao" aria-label="DAO 公开页视觉稿">
+      <header class="site-header"><button class="brand" data-go="market"><img src="./logo.png" alt=""><span><b>PonyDAO</b><small>BUILD IN PUBLIC</small></span></button><nav class="site-nav"><button class="selected">发现</button><button>产品</button><button>项目</button><button>DAO 排行</button></nav><div class="header-actions"><button class="ghost">发起 DAO</button><button class="avatar-button" data-go="hub"><span>陈</span>My Hub</button></div></header>
+      <div class="dao-page">
+        <button class="back-link" data-go="market">← 返回 DAO 市场</button>
+        <section class="dao-masthead">
+          <div class="mast-art"><div class="orbit one"></div><div class="orbit two"></div><div class="robot-core large"><span>P</span></div><span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span></div>
+          <div class="mast-copy"><div class="mast-label"><span class="tag light">DAO</span><span class="live"><i></i>持续建设中</span></div><h1>PONYGOGO</h1><p>共建随身机器人，让智能陪伴走向全球。</p><div class="mast-actions"><button class="primary">申请加入 DAO</button><button class="dark-ghost">关注更新</button></div></div>
+          <div class="mast-stats"><span><b>5</b>活跃成员</span><span><b>1</b>公开产品</span><span><b>1</b>推进项目</span></div>
+        </section>
+        <nav class="dao-subnav"><button class="active">概览</button><button>产品与项目 <span>2</span></button><button>成员 <span>5</span></button><button>规则与治理</button><button>公开金库</button></nav>
+        <div class="dao-columns">
+          <div class="dao-main-column">
+            <section class="story-card"><span class="overline">WHY WE EXIST</span><h2>让机器人成为真正有用的日常伙伴</h2><p>我们不是一家公司，也不是一次短期众筹。PONYGOGO 是由研发、销售和投资 OPC 共同建设的开放组织，所有贡献、进度和价值分配都可追溯。</p><div class="story-principles"><span><i>01</i>规则先于合作</span><span><i>02</i>贡献持续记录</span><span><i>03</i>价值透明分配</span></div></section>
+            <div class="section-row compact"><div><span class="overline">OPEN OPPORTUNITIES</span><h2>正在开放的参与机会</h2></div><button class="text-action">查看全部 2 个 →</button></div>
+            <article class="opportunity wide"><div class="op-icon product">P</div><div class="op-copy"><div><span class="tag product">产品</span><span>研发负责人：陈曦</span></div><h3>PONYGOGO 随身机器人</h3><p>完成便携机器人原型，验证语音陪伴与多语言交互。</p><div class="progress-row"><span><i style="width:68%"></i></span><b>68%</b></div><div class="role-row"><span>需要角色</span><b>研发 OPC × 3</b><b>产品 OPC × 1</b></div></div><button class="outline">查看机会</button></article>
+            <article class="opportunity wide"><div class="op-icon project">M</div><div class="op-copy"><div><span class="tag project">项目</span><span>销售负责人：周航</span></div><h3>拓展欧美市场</h3><p>与海外渠道伙伴开展试销，验证首批用户需求。</p><div class="progress-row"><span><i style="width:42%"></i></span><b>42%</b></div><div class="role-row"><span>需要角色</span><b>销售 OPC × 4</b><b>本地运营 × 2</b></div></div><button class="outline">查看机会</button></article>
+          </div>
+          <aside class="dao-side-column">
+            <section class="trust-panel"><span class="overline">TRANSPARENCY</span><h2>公开可信快照</h2><div class="trust-row"><span class="trust-icon">R</span><div><b>协作规则</b><small>贡献记录与里程碑公开</small></div><span class="verified">已公开</span></div><div class="trust-row"><span class="trust-icon">T</span><div><b>DAO 金库</b><small>余额 ¥128,600.00</small></div><span class="verified">可追溯</span></div><div class="trust-row"><span class="trust-icon">G</span><div><b>治理提案</b><small>通过 6 · 进行中 1</small></div><span class="verified">一人一票</span></div></section>
+            <section class="member-panel"><div class="section-row compact"><h3>核心成员</h3><button class="text-action">查看全部</button></div><div class="member-stack"><span>林</span><span>陈</span><span>周</span><span>许</span><span>方</span></div><p>由研发、销售、投资 OPC 共同组成。</p></section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen hub-screen" data-view="hub" aria-label="My Hub 视觉稿">
+      <aside class="hub-sidebar">
+        <button class="brand inverted" data-go="market"><img src="./logo.png" alt=""><span><b>PonyDAO</b><small>MY COLLABORATION HUB</small></span></button>
+        <button class="market-button" data-go="market">← DAO 市场</button>
+        <nav class="hub-nav"><button class="active"><span class="nav-glyph grid-glyph"></span>My Hub</button><button><span class="nav-glyph path-glyph"></span>我的协作</button><button><span class="nav-glyph wallet-glyph"></span>我的收益</button><small>DAO 工作区</small><button><i class="dao-mini blue">PG</i>PONYGOGO<span class="count">3</span></button><button><i class="dao-mini green">PR</i>PONYRUN<span class="count">1</span></button></nav>
+        <button class="profile-card"><span class="profile-avatar">陈</span><span><b>陈曦</b><small>研发 OPC</small></span><span>···</span></button>
+      </aside>
+      <main class="hub-main">
+        <header class="hub-top"><div><span>MY HUB</span><h1>早上好，陈曦</h1><p>你正在 2 个 DAO 中参与 3 项协作。</p></div><div><button class="icon-button" aria-label="通知"><span></span></button><button class="primary" data-go="market">探索新的机会</button></div></header>
+        <div class="hub-metrics"><article><span>进行中的协作</span><strong>3</strong><small>2 个产品 · 1 个项目</small></article><article><span>待处理事项</span><strong>4</strong><small class="accent">其中 2 项今日到期</small></article><article><span>累计贡献值</span><strong>1,280</strong><small>本月 +160</small></article><article class="dark"><span>可提现收益</span><strong>¥3,000</strong><button>查看明细 →</button></article></div>
+        <div class="hub-grid">
+          <section class="focus-panel"><div class="section-row compact"><div><span class="overline">NOW BUILDING</span><h2>我正在参与</h2></div><button class="text-action">全部协作 →</button></div><article class="focus-card"><div class="focus-cover"><span class="tag light">PONYGOGO</span><div class="robot-core"><span>P</span></div><small>产品 · 68%</small></div><div class="focus-copy"><span class="tag product">产品</span><h3>PONYGOGO 随身机器人</h3><p>本周目标：完成多语言语音交互原型</p><div class="progress-row"><span><i style="width:68%"></i></span><b>68%</b></div><div class="next-task"><span><i></i></span><div><small>下一项里程碑</small><b>提交语音交互验收包</b></div><time>9月13日</time></div><button class="outline wide-button">进入工作区</button></div></article><div class="small-collabs"><article><i class="dao-mini green">PR</i><div><span>产品</span><b>PONYRUN 运动传感器</b><small>参与申请待审批</small></div><span class="pending">待审批</span></article><article><i class="dao-mini blue">PG</i><div><span>项目</span><b>拓展欧美市场</b><small>竞品资料待补充</small></div><span class="due">今日</span></article></div></section>
+          <section class="activity-panel"><div class="section-row compact"><div><span class="overline">TO-DO</span><h2>待办与通知</h2></div><button class="filter-button">全部</button></div><div class="activity-list"><article><span class="activity-icon vote">V</span><div><b>参与治理投票</b><p>是否启动欧美市场小批量试销？</p><small>PONYGOGO · 还剩 2 天</small></div><button>去处理</button></article><article><span class="activity-icon money">¥</span><div><b>收益已经发布</b><p>首期协作收益 ¥3,000 已进入账户。</p><small>PONYGOGO · 2 小时前</small></div><button>查看</button></article><article><span class="activity-icon check">✓</span><div><b>成果等待补充</b><p>多语言语音交互原型需要补充验收说明。</p><small>PONYGOGO · 昨天</small></div><button>补充</button></article></div></section>
+        </div>
+      </main>
+    </section>
+
+    <section class="screen mobile-board" data-view="mobile" aria-label="移动端视觉稿">
+      <div class="mobile-note"><span class="overline">MOBILE FIRST</span><h1>公开发现与个人协作，分别保持轻量。</h1><p>移动端优先保证浏览、关注、查看待办与快速进入工作区，不承载复杂财务配置。</p></div>
+      <div class="phones">
+        <article class="phone"><div class="phone-bar"><span>9:41</span><i></i></div><header><button class="mobile-brand"><img src="./logo.png" alt="">PonyDAO</button><button class="mobile-avatar">陈</button></header><main><span class="overline">DISCOVER TOGETHER</span><h2>找到值得一起<br>建设的事</h2><p>开放浏览 DAO、产品与项目。</p><label class="mobile-search"><span class="search-icon"></span><input aria-label="移动端搜索" placeholder="搜索机会"></label><article class="mobile-feature"><span class="tag light">本周焦点 DAO</span><div class="robot-core"><span>P</span></div><h3>PONYGOGO</h3><p>让随身机器人走进每个人的日常。</p><button>查看 DAO →</button></article><div class="mobile-section"><div><h3>开放机会</h3><button>全部</button></div><article><i class="dao-mini blue">PG</i><div><span>产品 · 研发</span><b>PONYGOGO 随身机器人</b><small>68% 完成</small></div><span>→</span></article></div></main><nav class="mobile-tabs"><button class="active">发现</button><button>产品</button><button>项目</button><button>我的</button></nav></article>
+        <article class="phone"><div class="phone-bar"><span>9:41</span><i></i></div><header><button class="mobile-brand"><span class="profile-avatar">陈</span><span><small>MY HUB</small>早上好，陈曦</span></button><button class="mobile-avatar">···</button></header><main class="mobile-hub"><article class="mobile-balance"><span>可提现收益</span><strong>¥3,000.00</strong><div><span>累计贡献值 1,280</span><button>查看收益 →</button></div></article><div class="mobile-section"><div><h3>今日待办</h3><span class="count-badge">2</span></div><article><span class="activity-icon vote">V</span><div><b>参与治理投票</b><small>PONYGOGO · 还剩 2 天</small></div><span>→</span></article><article><span class="activity-icon check">✓</span><div><b>补充验收说明</b><small>语音交互原型 · 今日</small></div><span>→</span></article></div><div class="mobile-section"><div><h3>我正在参与</h3><button>全部</button></div><article class="mobile-project"><i class="dao-mini blue">PG</i><div><span>产品 · 68%</span><b>PONYGOGO 随身机器人</b><small>下一项：提交语音验收包</small></div><span>→</span></article><article class="mobile-project"><i class="dao-mini green">PR</i><div><span>产品 · 待审批</span><b>PONYRUN 运动传感器</b><small>申请已提交</small></div><span>→</span></article></div></main><nav class="mobile-tabs"><button class="active">My Hub</button><button>协作</button><button>收益</button><button>我的</button></nav></article>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
