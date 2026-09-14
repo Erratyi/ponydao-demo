@@ -1,20 +1,38 @@
-# PonyDAO 前端视觉方向稿
+# PONY共创视觉方向稿
 
-PonyDAO 是一个面向 OPC 的开放式 DAO 协作平台。本仓库当前发布的是用于讨论产品方向和交互结构的前端视觉稿，不连接后端。
+基于 React + Vite 的四页面前端视觉草稿，聚焦页面结构、内容层级和统一视觉语言，不属于业务 MVP。
 
 在线预览：https://erratyi.github.io/ponydao-demo/
 
-视觉稿包含四组可切换画面：
-
-- DAO 市场：公开发现 DAO、产品与项目。
-- DAO 公开页：查看使命、开放机会、成员、规则、治理和金库透明度。
-- My Hub：汇总个人协作、待办、贡献和收益。
-- 移动端：验证公开发现与个人协作在手机上的信息优先级。
-
-## 本地预览
+## 运行
 
 ```bash
-python3 -m http.server 3300 --directory site
+npm install
+npm run dev -- --host 127.0.0.1 --port 3300
 ```
 
-打开 http://127.0.0.1:3300/ ，顶部可以切换四组画面，也可直接访问 `#market`、`#dao`、`#hub` 和 `#mobile`。
+## 页面
+
+- `#home`：类似 OPCMatch 官网职责的平台介绍首页
+- `#hall`：面向产品与项目的共创大厅
+- `#dao`：展示产品、项目、成员和规则的 DAO 公开页
+- `#profile`：当前 OPC 的参与、贡献与收益概览
+
+## 视觉稿内的必要状态
+
+- 全局页面切换与移动端折叠菜单
+- 共创大厅搜索与对象/能力筛选
+- DAO 公开页分区标签
+- 个人中心分区选中状态
+- 轻量操作反馈
+
+## 验证
+
+```bash
+npm run build
+npm run test:sites
+```
+
+推送到 `main` 分支后，GitHub Actions 会自动构建并发布 GitHub Pages。
+
+本稿仅用于产品方向讨论，后端、真实登录、数据保存和资金能力均未接入。
