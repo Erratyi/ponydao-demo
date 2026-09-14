@@ -32,6 +32,13 @@ const routes = [
   { id: "dao", label: "探索 DAO" },
 ];
 
+const draftPages = [
+  { id: "home", label: "首页" },
+  { id: "hall", label: "共创大厅" },
+  { id: "dao", label: "DAO 公开页" },
+  { id: "profile", label: "个人中心" },
+];
+
 const opportunities = [
   { dao: "PONYGOGO DAO", type: "产品", title: "PONYGOGO 随身机器人", summary: "让 AI 走进每个人的生活，打造真正有温度的随身智能机器人。", roles: "产品研发、工业设计", stage: "进行中", members: 32, image: assetPath("assets/ponygogo-robot.png"), capability: "研发" },
   { dao: "PONYGOGO DAO", type: "项目", title: "拓展欧美市场", summary: "将 PONYGOGO 的创新产品带给全球更多用户，建立长期市场影响力。", roles: "海外销售、品牌伙伴", stage: "筹备中", members: 18, image: assetPath("assets/global-market.png"), capability: "销售" },
@@ -59,6 +66,32 @@ function Brand({ onNavigate }) {
       <img src={assetPath("assets/pony-logo.png")} alt="" />
       <span>PONY共创</span>
     </button>
+  );
+}
+
+function DraftSwitcher({ route, onNavigate }) {
+  return (
+    <div className="draft-switcher">
+      <div className="draft-identity">
+        <span className="draft-mark">P</span>
+        <span><strong>PONY共创</strong><small>前端视觉稿</small></span>
+      </div>
+      <nav className="draft-tabs" aria-label="视觉稿页面切换">
+        {draftPages.map((page, index) => (
+          <button
+            key={page.id}
+            className={route === page.id ? "active" : ""}
+            type="button"
+            aria-current={route === page.id ? "page" : undefined}
+            onClick={() => onNavigate(page.id)}
+          >
+            <small>{String(index + 1).padStart(2, "0")}</small>
+            {page.label}
+          </button>
+        ))}
+      </nav>
+      <span className="draft-note">4 个页面 · 点击切换</span>
+    </div>
   );
 }
 
@@ -217,5 +250,5 @@ export function App() {
   useEffect(() => { document.title = `${route === "home" ? "首页" : route === "hall" ? "共创大厅" : route === "dao" ? "PONYGOGO" : "个人中心"} · PONY共创`; window.scrollTo({ top: 0, behavior: "instant" }); }, [route]);
   useEffect(() => { if (!toast) return undefined; const timer = window.setTimeout(() => setToast(""), 2400); return () => window.clearTimeout(timer); }, [toast]);
   const navigate = (next) => { if (readRoute() === next) setRoute(next); window.location.hash = next; };
-  return <div className="site-shell" style={{ "--network-image": `url("${assetPath("assets/hero-network-bg.png")}")` }}><a className="skip-link" href="#main-content">跳到主要内容</a><Header route={route} onNavigate={navigate} onNotice={setToast} /><div id="main-content">{route === "home" && <HomePage onNavigate={navigate} onNotice={setToast} />}{route === "hall" && <HallPage onNavigate={navigate} />}{route === "dao" && <DaoPage onNotice={setToast} />}{route === "profile" && <ProfilePage onNotice={setToast} />}</div><div className={`toast ${toast ? "show" : ""}`} role="status" aria-live="polite">{toast}</div></div>;
+  return <div className="site-shell" style={{ "--network-image": `url("${assetPath("assets/hero-network-bg.png")}")` }}><a className="skip-link" href="#main-content">跳到主要内容</a><DraftSwitcher route={route} onNavigate={navigate} /><Header route={route} onNavigate={navigate} onNotice={setToast} /><div id="main-content">{route === "home" && <HomePage onNavigate={navigate} onNotice={setToast} />}{route === "hall" && <HallPage onNavigate={navigate} />}{route === "dao" && <DaoPage onNotice={setToast} />}{route === "profile" && <ProfilePage onNotice={setToast} />}</div><div className={`toast ${toast ? "show" : ""}`} role="status" aria-live="polite">{toast}</div></div>;
 }
